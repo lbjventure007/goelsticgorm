@@ -21,23 +21,6 @@ type X struct {
 	i int
 }
 
-func TestShardingProxy() {
-	inits.InitDb()
-
-	//orders := model.Orders{}
-	//orders.ID = 1
-	//orders.UserID = 2
-	//orders.OrderId = 121324432423425
-	//orders.Name = "aa"
-	//orders.CreateTime = time.Now()
-	//reuslt := inits.Db.Create(&orders)
-	//fmt.Println(reuslt.Error, reuslt.RowsAffected, orders.OrderId)
-	o := []model.Orders{}
-	re := inits.Db.Where("user_id=?", 2).Find(&o)
-
-	fmt.Println(re.Error, o)
-}
-
 func Test() {
 
 	//zookeeper 分布式锁
