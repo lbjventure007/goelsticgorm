@@ -2,13 +2,14 @@ package main
 
 import (
 	"gogormlearn/routers"
-	"gogormlearn/test"
 )
 
 func main() {
 	r := routers.InitRoute()
 	//inits.InitSentinel()
+	//inits.InitRedis()
 
-	test.TestShardingProxy()
-	r.Run()
+	//	test.Rand()
+	//test.TestShardingProxy()
+	r.Run(":8085")
 }
